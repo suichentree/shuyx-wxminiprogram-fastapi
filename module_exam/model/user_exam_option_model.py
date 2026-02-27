@@ -1,0 +1,34 @@
+# 导入sqlalchemy框架中的相关字段
+from datetime import datetime
+from typing import List
+
+from sqlalchemy import Integer, DateTime, func, Index, JSON
+from sqlalchemy.orm import Mapped, MappedColumn
+
+# 导入公共基类
+from base.base_model import myBaseModel
+
+class MpUserExamOptionModel(myBaseModel):
+    """
+    用户选项表 mp_user_exam_option
+    该表记录，用户答题的详情信息。例如用户在A测试的某一次测试记录中的某一道题中，选择了哪些选项，是否答对了。
+    """
+    __tablename__ = 't_user_exam_option'
+
+    id: Mapped[int] = MappedColumn(Integer, primary_key=True, autoincrement=True, comment='用户选项id')
+    user_id: Mapped[int] = MappedColumn(Integer, nullable=False, comment='用户id')
+    exam_id: Mapped[int] = MappedColumn(Integer, nullable=False, comment='测试id')
+    user_exam_id: Mapped[int] = MappedColumn(Integer, nullable=False, comment='用户测试id')
+    question_id: Mapped[int] = MappedColumn(Integer, nullable=False, comment='问题id')
+    question_type: Mapped[int] = MappedColumn(Integer, nullable=False, comment='问题类型')
+    option_ids: Mapped[List[int]] = MappedColumn(JSON, nullable=False, comment='选项id数组，无论单选多选都是列表。例如：[1, 3, 5, ...]')
+    is_correct: Mapped[int] = MappedColumn(Integer, nullable=False, comment='是否答对 答对1 答错0')
+    create_time: Mapped[datetime] = MappedColumn(DateTime, comment='创建时间', default=func.now())
+
+    # 添加索引
+    __table_args__ = (
+        Index('index_id', 'id'),
+        Index('index_user_id', 'user_id'),
+        Index('index_exam_id', 'exam_id'),
+        Index('index_user_exam_id', 'user_exam_id'),
+    )
