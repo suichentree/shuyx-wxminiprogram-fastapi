@@ -13,7 +13,7 @@ class MpUserExamOptionModel(myBaseModel):
     用户选项表 mp_user_exam_option
     该表记录，用户答题的详情信息。例如用户在A测试的某一次测试记录中的某一道题中，选择了哪些选项，是否答对了。
     """
-    __tablename__ = 't_user_exam_option'
+    __tablename__ = 'mp_user_exam_option'
 
     id: Mapped[int] = MappedColumn(Integer, primary_key=True, autoincrement=True, comment='用户选项id')
     user_id: Mapped[int] = MappedColumn(Integer, nullable=False, comment='用户id')

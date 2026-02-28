@@ -7,11 +7,11 @@ from sqlalchemy.orm import Mapped, MappedColumn
 # 导入公共基类
 from base.base_model import myBaseModel
 
-class ExamModel(myBaseModel):
+class MpExamModel(myBaseModel):
     """
     测试表 mp_exam
     """
-    __tablename__ = 't_exam'
+    __tablename__ = 'mp_exam'
 
     id: Mapped[int] = MappedColumn(Integer, primary_key=True, autoincrement=True, comment='测试id')
     name: Mapped[str] = MappedColumn(String(50), unique=True, nullable=False, comment='测试名称')

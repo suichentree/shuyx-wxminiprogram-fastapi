@@ -1,4 +1,4 @@
-from module_exam.model.user_exam_option_model import MpUserExamOptionModel
+from module_exam.model.mp_user_exam_option_model import MpUserExamOptionModel
 from base.base_dao import BaseDao
 
 

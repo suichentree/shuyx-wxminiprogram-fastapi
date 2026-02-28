@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 
 from module_exam.dao.mp_user_exam_dao import MpUserExamDao
-from module_exam.model.user_exam_model import MpUserExamModel
+from module_exam.model.mp_user_exam_model import MpUserExamModel
 from base.base_service import BaseService
 
 # 继承Service类，专注于业务操作, 可添加自定义方法

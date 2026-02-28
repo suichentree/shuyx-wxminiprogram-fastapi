@@ -7,11 +7,11 @@ from sqlalchemy.orm import Mapped, MappedColumn
 # 导入公共基类
 from base.base_model import myBaseModel
 
-class OptionModel(myBaseModel):
+class MpOptionModel(myBaseModel):
     """
     选项表 mp_option
     """
-    __tablename__ = 't_option'
+    __tablename__ = 'mp_option'
 
     id: Mapped[int] = MappedColumn(Integer, primary_key=True, autoincrement=True, comment='选项id')
     question_id: Mapped[int] = MappedColumn(Integer, nullable=False, comment='问题id')

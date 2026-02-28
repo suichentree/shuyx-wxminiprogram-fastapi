@@ -1,6 +1,6 @@
 from sqlalchemy import desc
 
-from module_exam.model.user_exam_model import MpUserExamModel
+from module_exam.model.mp_user_exam_model import MpUserExamModel
 from base.base_dao import BaseDao
 
 

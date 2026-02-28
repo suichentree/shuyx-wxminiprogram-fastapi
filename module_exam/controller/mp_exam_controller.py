@@ -8,7 +8,7 @@ from config.database_config import get_db_session
 
 from config.log_config import logger
 from module_exam.dto.mp_exam_dto import MpExamDTO, MpExamCommonDTO
-from module_exam.model.exam_model import MpExamModel
+from module_exam.model.mp_exam_model import MpExamModel
 from module_exam.service.mp_exam_service import MpExamService
 from module_exam.service.mp_option_service import MpOptionService
 from module_exam.service.mp_question_service import MpQuestionService

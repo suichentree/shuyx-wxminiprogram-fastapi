@@ -1,4 +1,4 @@
-from module_exam.model.user_model import MpUserModel
+from module_exam.model.mp_user_model import MpUserModel
 from base.base_dao import BaseDao
 
 

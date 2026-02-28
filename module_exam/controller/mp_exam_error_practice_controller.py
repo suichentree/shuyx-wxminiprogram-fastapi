@@ -7,7 +7,7 @@ from config.database_config import get_db_session
 
 from config.log_config import logger
 from module_exam.dto.mp_question_dto import MpQuestionOptionDTO, MpQuestionOptionTraceDTO
-from module_exam.model.user_question_ebbinghaus_track import MpUserQuestionEbbinghausTrackModel
+from module_exam.model.mp_user_question_ebbinghaus_track import MpUserQuestionEbbinghausTrackModel
 from module_exam.service.mp_exam_service import MpExamService
 from module_exam.service.mp_option_service import MpOptionService
 from module_exam.service.mp_question_service import MpQuestionService

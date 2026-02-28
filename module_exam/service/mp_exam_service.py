@@ -1,7 +1,7 @@
 from typing import List
 
 from module_exam.dao.mp_exam_dao import MpExamDao
-from module_exam.model.exam_model import MpExamModel
+from module_exam.model.mp_exam_model import MpExamModel
 from base.base_service import BaseService
 
 # 继承Service类，专注于业务操作, 可添加自定义方法

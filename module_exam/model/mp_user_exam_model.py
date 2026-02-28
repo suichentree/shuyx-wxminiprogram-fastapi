@@ -8,11 +8,11 @@ from sqlalchemy.orm import Mapped, MappedColumn
 # 导入公共基类
 from base.base_model import myBaseModel
 
-class UserExamModel(myBaseModel):
+class MpUserExamModel(myBaseModel):
     """
     用户测试表 mp_user_exam
     """
-    __tablename__ = 't_user_exam'
+    __tablename__ = 'mp_user_exam'
 
     id: Mapped[int] = MappedColumn(Integer, primary_key=True, autoincrement=True, comment='用户测试id')
     user_id: Mapped[int] = MappedColumn(Integer, nullable=False, comment='用户id')

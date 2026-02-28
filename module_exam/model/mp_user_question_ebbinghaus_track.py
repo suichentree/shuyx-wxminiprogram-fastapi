@@ -7,12 +7,12 @@ from sqlalchemy.orm import Mapped, MappedColumn
 # 导入公共基类
 from base.base_model import myBaseModel
 
-class UserQuestionEbbinghausTrackModel(myBaseModel):
+class MpUserQuestionEbbinghausTrackModel(myBaseModel):
     """
     用户题目艾宾浩斯轨迹表 mp_user_question_ebbinghaus_track
     该表记录，用户在某一个题目的答题情况。然后根据艾宾浩斯记忆曲线，计算出下一次需要复习该题目时的时间。
     """
-    __tablename__ = 't_user_question_ebbinghaus_track'
+    __tablename__ = 'mp_user_question_ebbinghaus_track'
 
     id: Mapped[int] = MappedColumn(Integer, primary_key=True, autoincrement=True, comment='用户选项id')
     user_id: Mapped[int] = MappedColumn(Integer, nullable=False, comment='用户id')
